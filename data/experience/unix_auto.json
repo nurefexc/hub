@@ -1,0 +1,13 @@
+{
+  "title": "Software Architect & Legacy System Specialist",
+  "company": "Unix Autó Kft.",
+  "location": "Budapest",
+  "period": "Jul 2022 – Aug 2023",
+  "start_date": "2022-07-01",
+  "description": "Designed and maintained core components of a high-load in-house ERP system using **C** and **Harbour**. Optimized complex **T-SQL** procedures for large-scale logistics operations.",
+  "skills": [
+    "C",
+    "Transact-SQL (T-SQL)",
+    "Harbour"
+  ]
+}

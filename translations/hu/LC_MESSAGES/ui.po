@@ -1,0 +1,124 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hu\n"
+
+msgid "View My CV"
+msgstr "Önéletrajz megtekintése"
+
+msgid "View My Full CV"
+msgstr "Teljes önéletrajz megnyitása"
+
+msgid "Website"
+msgstr "Weboldal"
+
+msgid "Contact Me"
+msgstr "Kapcsolat"
+
+msgid "Back to Home"
+msgstr "Vissza a főoldalra"
+
+msgid "Download PDF"
+msgstr "PDF letöltése"
+
+msgid "Professional Experience"
+msgstr "Szakmai tapasztalat"
+
+msgid "Professional Skills"
+msgstr "Szakmai ismeretek"
+
+msgid "Programming Languages"
+msgstr "Programozási nyelvek"
+
+msgid "Databases & Tools"
+msgstr "Adatbázisok és Eszközök"
+
+msgid "Education"
+msgstr "Tanulmányok"
+
+msgid "Languages"
+msgstr "Idegen nyelvek"
+
+msgid "Skills"
+msgstr "Készségek"
+
+msgid "Contact"
+msgstr "Kapcsolat"
+
+msgid "GitHub Profile"
+msgstr "GitHub profil"
+
+msgid "Linux (Fixed, no switching!)"
+msgstr "Linux (Fixált, nem váltok!)"
+
+msgid "zsh (env-craft)"
+msgstr "zsh (env-craft)"
+
+msgid "Available for Projects (B2B)"
+msgstr "Projektekre elérhető (B2B)"
+
+msgid "ERP Customization (Odoo/Python)"
+msgstr "ERP testreszabás (Odoo/Python)"
+
+msgid "System Integration & API Development"
+msgstr "Rendszerintegráció és API fejlesztés"
+
+msgid "Legacy System Maintenance (C, C++, Harbour)"
+msgstr "Legacy rendszerek karbantartása (C, C++, Harbour)"
+
+msgid "Proprietary R&D Project"
+msgstr "Saját K+F projekt"
+
+msgid "Visit Website"
+msgstr "Weboldal megtekintése"
+
+msgid "C# Markdown Library"
+msgstr "C# Markdown könyvtár"
+
+msgid "A high-performance **Markdown** processing library for **.NET**. Focused on extensibility and speed."
+msgstr "Egy nagy teljesítményű **Markdown** feldolgozó könyvtár **.NET**-hez. A bővíthetőségre és a sebességre összpontosítva."
+
+msgid "High-performance head tracking software for simulation games. Contributing to core architecture and hardware integration."
+msgstr "Egy átfogó IT eseménygyűjtő platform. A backend és a közösségi funkciók tervezése."
+
+msgid "A comprehensive IT event aggregator platform. Architecting the backend and community-driven features."
+msgstr "Egy átfogó IT eseménygyűjtő platform. A backend és a közösségi funkciók tervezése."
+
+msgid "Source Code"
+msgstr "Forráskód"
+
+msgid "Available for B2B contract work"
+msgstr "B2B szerződéses munkára elérhető"
+
+msgid "Ez az önéletrajz automatikusan generálódott egy egyedi Flask backend segítségével. 100% kézműves kód."
+msgstr "Ez az önéletrajz automatikusan generálódott egy egyedi Flask backend segítségével. 100% kézműves kód."
+
+msgid "My custom zsh environment"
+msgstr "Az egyedi zsh környezetem"
+
+msgid "A highly optimized, developer-friendly zsh configuration. Feel free to use and contribute!"
+msgstr "Egy erősen optimalizált, fejlesztőbarát zsh konfiguráció. Nyugodtan használd és járulj hozzá!"
+
+msgid "Open Source Project"
+msgstr "Nyílt forráskódú projekt"
+
+msgid "Terminal status: Always open. If you see this, I'm probably in a tmux session right now."
+msgstr "Terminál állapot: Mindig nyitva. Ha ezt látod, valószínűleg épp egy tmux session-ben vagyok."
+
+msgid "nurefexc is not in the sudoers file. This incident will be reported to... actually, just me."
+msgstr "nurefexc nem szerepel a sudoers fájlban. Ez az incidens jelentve lesz... tulajdonképpen csak nekem."
+
+msgid "“Talk is cheap. Show me the code.” — Linus Torvalds"
+msgstr "„A beszéd olcsó. Mutasd a kódot.” — Linus Torvalds"
+
+msgid "Non-Profit Protocol System"
+msgstr "Civil szervezeti jegyzőkönyvvezető rendszer"
+
+msgid "Proprietary B2B Solution"
+msgstr "Zártkörű B2B megoldás"
+
+msgid "A secure, in-house record-keeping (protocol) system developed for a non-profit organization as part of their ERP solution. Focused on data integrity and specialized workflows."
+msgstr "Egy civil szervezet számára fejlesztett, vállalatirányítási rendszerbe integrált jegyzőkönyvvezető szoftver. Kiemelt fókusszal az adatintegritásra és speciális munkafolyamatokra."

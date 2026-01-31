@@ -1,0 +1,15 @@
+{
+  "title": "Systems Integration Contractor",
+  "company": "KDB Bank Europe Ltd.",
+  "location": "Budapest",
+  "period": "Sep 2023 – Mar 2024",
+  "start_date": "2023-09-01",
+  "description": "Implemented critical financial data processing modules and cross-system integrations. Specialized in **Oracle SQL** performance tuning and **C/C++** system-level services.",
+  "skills": [
+    "C",
+    "C++",
+    "Oracle SQL",
+    "Linux",
+    "PowerBuilder"
+  ]
+}

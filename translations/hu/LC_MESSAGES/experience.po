@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hu\n"
+
+msgid "Aug 2025 – Present"
+msgstr "2025 Aug – Jelenleg"
+
+msgid "Jan 2025 – Present"
+msgstr "2025 Jan – Jelenleg"
+
+msgid "Mar 2024 – Jul 2025"
+msgstr "2024 Márc – 2025 Júl"
+
+msgid "Sep 2023 – Mar 2024"
+msgstr "2023 Szept – 2024 Márc"
+
+msgid "Jul 2022 – Aug 2023"
+msgstr "2022 Júl – 2023 Aug"
+
+msgid "Jun 2020 – Jul 2022"
+msgstr "2020 Jún – 2022 Júl"
+
+msgid "ERP Solutions Contractor (Odoo/Python)"
+msgstr "ERP megoldások kivitelezője (Odoo/Python)"
+
+msgid "Delivered custom **Odoo** modules and complex business logic optimizations. Engineered automated data migration scripts and integrated external APIs into the ERP ecosystem."
+msgstr "Egyedi **Odoo** modulokat és összetett üzleti logika optimalizálásokat szállítottam. Automatizált adatmigrációs scripteket terveztem és külső API-kat integráltam az ERP ökoszisztémába."
+
+msgid "Providing on-demand ERP customization and module development. Specializing in high-performance business logic and Odoo ORM optimization."
+msgstr "Igény szerinti ERP testreszabás és modulfejlesztés. Nagy teljesítményű üzleti logikára és Odoo ORM optimalizálásra szakosodva."
+
+msgid "Software Architect & Legacy System Specialist"
+msgstr "Szoftverarchitekt és Legacy rendszer specialista"
+
+msgid "Designed and maintained core components of a high-load in-house ERP system using **C** and **Harbour**. Optimized complex **T-SQL** procedures for large-scale logistics operations."
+msgstr "Egy nagy terhelésű, házon belüli ERP rendszer magkomponenseit terveztem és tartottam karban **C** és **Harbour** nyelveken. Összetett **T-SQL** eljárásokat optimalizáltam nagyméretű logisztikai műveletekhez."
+
+msgid "Systems Integration Contractor"
+msgstr "Rendszerintegrációs kivitelező"
+
+msgid "Implemented critical financial data processing modules and cross-system integrations. Specialized in **Oracle SQL** performance tuning and **C/C++** system-level services."
+msgstr "Kritikus pénzügyi adatfeldolgozó modulokat és rendszerek közötti integrációkat valósítottam meg. **Oracle SQL** teljesítményhangolásra és **C/C++** rendszerszintű szolgáltatásokra szakosodva."
+
+msgid "ERP & Software Development Contractor"
+msgstr "ERP és szoftverfejlesztési kivitelező"
+
+msgid "Available for B2B contract work. Delivered high-impact solutions for ERP customization, API development, and legacy system modernization."
+msgstr "B2B szerződéses munkára elérhető. Nagy hatású megoldásokat szállítottam ERP testreszabás, API fejlesztés és legacy rendszerek modernizálása terén."
+
+msgid "ERP Solutions Architect (B2B)"
+msgstr "ERP megoldások architektje (B2B)"
+
+msgid "Architected and delivered custom enterprise solutions. Optimized **Odoo** workflows for logistics and warehouse management, significantly reducing operational overhead."
+msgstr "Egyedi vállalati megoldásokat terveztem és szállítottam. Optimalizáltam az **Odoo** munkafolyamatokat a logisztika és raktárkezelés területén, jelentősen csökkentve az operatív költségeket."

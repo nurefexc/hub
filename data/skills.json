@@ -1,0 +1,40 @@
+{
+  "categories": [
+    {
+      "name": "Programming Languages",
+      "skill_list": [
+        "Python",
+        "C#",
+        "C++",
+        "C",
+        "Harbour",
+        "JavaScript (Node.js)"
+      ]
+    },
+    {
+      "name": "Databases",
+      "skill_list": [
+        "PostgreSQL",
+        "MSSQL (T-SQL)",
+        "Oracle SQL"
+      ]
+    },
+    {
+      "name": "Specialties",
+      "skill_list": [
+        "Odoo ORM",
+        "ERP Business Logic",
+        "System Integration",
+        "XPath / XML / JSON"
+      ]
+    },
+    {
+      "name": "Tools",
+      "skill_list": [
+        "Docker",
+        "Git",
+        "Linux"
+      ]
+    }
+  ]
+}

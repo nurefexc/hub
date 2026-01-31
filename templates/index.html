@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ personal.full_name }} - {{ personal.title }} | Portfolio</title>
+    <meta name="description" content="{{ personal.full_name }} - {{ personal.title }} portfolio. Check out my skills, experience and education.">
+    <meta name="author" content="{{ personal.full_name }}">
+    <meta name="keywords" content="{{ personal.title }}, Software Developer, Web Development, Portfolio, {{ personal.full_name }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.url_root }}">
+    <meta property="og:title" content="{{ personal.full_name }} - {{ personal.title }}">
+    <meta property="og:description" content="{{ personal.full_name }}'s professional portfolio and CV.">
+    <meta property="og:image" content="{{ url_for('static', filename='android-chrome-512x512.png', _external=True) }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="{{ request.url_root }}">
+    <meta property="twitter:title" content="{{ personal.full_name }} - {{ personal.title }}">
+    <meta property="twitter:description" content="{{ personal.full_name }}'s professional portfolio and CV.">
+    <meta property="twitter:image" content="{{ url_for('static', filename='android-chrome-512x512.png', _external=True) }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+</head>
+<body>
+    <div class="top-nav">
+        <a href="/cv?lang={{ lang }}" class="static-cv-link" title="{{ _('View My CV') }}">
+            <i class="fas fa-file-alt"></i> <span>CV</span>
+        </a>
+        <a href="/?lang={{ 'hu' if lang == 'en' else 'en' }}" class="lang-btn">
+            {{ 'Magyar' if lang == 'en' else 'English' }}
+        </a>
+    </div>
+
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+            <div class="terminal-title">env-craft zsh — ~/portfolio (main)</div>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+            <div class="output" id="out-1">
+                <span class="prompt">nurefexc@freelance</span> <span class="prompt-dir">~</span> <span class="prompt-git"> main</span> <span class="prompt-symbol">❯</span> <span class="command" id="cmd-1"></span><br>
+                <span id="res-1" style="display: none;">{{ personal.full_name }}</span>
+            </div>
+            <div class="output" id="out-2">
+                <span class="prompt">nurefexc@freelance</span> <span class="prompt-dir">~</span> <span class="prompt-git"> main</span> <span class="prompt-symbol">❯</span> <span class="command" id="cmd-2"></span>
+            <div class="neofetch" id="res-2" style="display: none;">
+                <div class="ascii-art">
+   -`
+  .o+`
+ `ooo/
+`+oooo:
+`+oooooo:
+-+oooooo+:
+`/:-:++oooo+:
+`/++++/+++++++:
+`/++++++++++++++:
+`/+++ooooooooooooo/`
+./ooossssqooossssooo/.
+.ooosssshhhssshssosssso.
+.ooosssshhhhhssssssoosssso.
+.osssshhhssshhhhhhhssssssooo.
+/osssssshshhhhhhhhhhhhhhhsssssso.
+/sssshvhhhhhhhhhhhhhhhhhhhhhhhssso.
+`ooosshhhhhhhhhhhhhhhhhhhhhhhhssso`
+`osshhhhhhhhhhhhhhhhhhhhhhhhhhso`
+  `shhhhhhhhhhhhhhhhhhhhhhhs`
+    `oshhhhhhhhhhhhhhhss`
+      `oshhhhhhhss`
+        `oshss`
+          `s`
+                </div>
+                <ul class="info-list">
+                    <li class="info-item"><span class="info-key">{{ personal.full_name }}</span>@<span class="info-key">freelance</span></li>
+                    <li class="info-item">-----------------</li>
+                    <li class="info-item"><span class="info-key">Kernel</span>: {{ _('Linux (Fixed, no switching!)') }}</li>
+                    <li class="info-item"><span class="info-key">Shell</span>: <a href="https://github.com/nurefexc/env-craft" target="_blank" style="color: inherit; text-decoration: underline;">{{ _('zsh (env-craft)') }}</a></li>
+                    <li class="info-item"><span class="info-key">Role</span>: {{ personal.title }}</li>
+                    <li class="info-item"><span class="info-key">Status</span>: {{ _('Available for Projects (B2B)') }}</li>
+                    <li class="info-item"><span class="info-key">Matrix</span>: <a href="https://matrix.to/#/{{ personal.matrix }}" target="_blank" class="matrix-link"><i class="fa-brands fa-matrix-org"></i> {{ personal.matrix }}</a></li>
+                    <li class="info-item"><span class="info-key">Website</span>: <a href="https://{{ personal.website }}" target="_blank" style="color: inherit; text-decoration: underline;"><i class="fas fa-globe"></i> https://{{ personal.website }}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="output" id="out-3">
+            <span class="prompt">nurefexc@freelance</span> <span class="prompt-dir">~/portfolio</span> <span class="prompt-git"> main</span> <span class="prompt-symbol">❯</span> <span class="command" id="cmd-3"></span><br>
+            <div id="res-3" style="display: none; margin-top: 10px;">
+                <div class="services-container">
+                    <div class="service-item"><i class="fas fa-check-circle"></i> {{ _('ERP Customization (Odoo/Python)') }}</div>
+                    <div class="service-item"><i class="fas fa-check-circle"></i> {{ _('System Integration & API Development') }}</div>
+                    <div class="service-item"><i class="fas fa-check-circle"></i> {{ _('Legacy System Maintenance (C, C++, Harbour)') }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="output" id="out-4">
+            <span class="prompt">nurefexc@freelance</span> <span class="prompt-dir">~/portfolio</span> <span class="prompt-git"> main</span> <span class="prompt-symbol">❯</span> <span class="command" id="cmd-4"></span><br>
+            <div class="skills-pills" id="res-4" style="display: none;">
+                {% for cat in skills.categories %}
+                    {% for item in cat.skill_list %}
+                    <span class="pill">{{ _(item) }}</span>
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="output" id="out-5">
+            <span class="prompt">nurefexc@freelance</span> <span class="prompt-dir">~/portfolio</span> <span class="prompt-git"> main</span> <span class="prompt-symbol">❯</span> <span class="command" id="cmd-5"></span><br>
+            <div id="res-5" style="display: none; margin-top: 10px;">
+                <div class="project-box">
+                    <div class="project-header">
+                        <i class="fas fa-calendar-alt"></i> <strong>opentrack.dev</strong> - {{ _('Proprietary R&D Project') }}
+                    </div>
+                    <div class="project-desc">
+                        {{ _('A comprehensive IT event aggregator platform. Architecting the backend and community-driven features.') }}
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <a href="https://opentrack.dev" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> {{ _('Visit Website') }}
+                        </a>
+                        <a href="https://github.com/Open-Track-Dev" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> {{ _('Source Code') }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="output" id="out-10">
+            <span class="prompt">nurefexc@freelance</span> <span class="prompt-dir">~/portfolio</span> <span class="prompt-git"> main</span> <span class="prompt-symbol">❯</span> <span class="command" id="cmd-10"></span><br>
+            <div id="res-10" style="display: none; margin-top: 10px;">
+                <div class="project-box">
+                    <div class="project-header">
+                        <i class="fas fa-file-signature"></i> <strong>{{ _('Non-Profit Protocol System') }}</strong> - {{ _('Proprietary B2B Solution') }}
+                    </div>
+                    <div class="project-desc">
+                        {{ _('A secure, in-house record-keeping (protocol) system developed for a non-profit organization as part of their ERP solution. Focused on data integrity and specialized workflows.') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="output" id="out-6">
+            <span class="prompt">nurefexc@freelance</span> <span class="prompt-dir">~/portfolio</span> <span class="prompt-git"> main</span> <span class="prompt-symbol">❯</span> <span class="command" id="cmd-6"></span><br>
+            <div id="res-6" style="display: none; margin-top: 10px;">
+                <div class="project-box">
+                    <div class="project-header">
+                        <i class="fab fa-github"></i> <strong>env-craft</strong> - {{ _('My custom zsh environment') }}
+                    </div>
+                    <div class="project-desc">
+                        {{ _('A highly optimized, developer-friendly zsh configuration. Feel free to use and contribute!') }}
+                    </div>
+                    <a href="https://github.com/nurefexc/env-craft" target="_blank" class="project-link">
+                        <i class="fab fa-github"></i> {{ _('Open Source Project') }}
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="output" id="out-11">
+            <span class="prompt">nurefexc@freelance</span> <span class="prompt-dir">~/portfolio</span> <span class="prompt-git"> main</span> <span class="prompt-symbol">❯</span> <span class="command" id="cmd-11"></span><br>
+            <div id="res-11" style="display: none; margin-top: 10px;">
+                <div class="project-box">
+                    <div class="project-header">
+                        <i class="fas fa-file-code"></i> <strong>OpenMarkdown</strong> - {{ _('C# Markdown Library') }}
+                    </div>
+                    <div class="project-desc">
+                        {{ _('A high-performance **Markdown** processing library for **.NET**. Focused on extensibility and speed.') }}
+                    </div>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <a href="https://github.com/nurefexc/OpenMarkdown" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.nuget.org/packages/Open.Markdown" target="_blank" class="project-link">
+                            <i class="fas fa-box"></i> NuGet
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="output" id="out-7">
+            <span class="prompt">nurefexc@freelance</span> <span class="prompt-dir">~/portfolio</span> <span class="prompt-git"> main</span> <span class="prompt-symbol">❯</span> <span class="command" id="cmd-7"></span><br>
+            <div id="res-7" style="display: none; color: var(--text-dim); font-style: italic; margin-top: 5px;">
+                {{ _('Terminal status: Always open. If you see this, I\'m probably in a tmux session right now.') }}
+            </div>
+        </div>
+        <div class="output" id="out-8">
+            <span class="prompt">nurefexc@freelance</span> <span class="prompt-dir">~/portfolio</span> <span class="prompt-git"> main</span> <span class="prompt-symbol">❯</span> <span class="command" id="cmd-8"></span><br>
+            <div id="res-8" style="display: none; color: #ff5f56; margin-top: 5px;">
+                {{ _('nurefexc is not in the sudoers file. This incident will be reported to... actually, just me.') }}
+            </div>
+        </div>
+        <div class="output" id="out-9">
+            <span class="prompt">nurefexc@freelance</span> <span class="prompt-dir">~/portfolio</span> <span class="prompt-git"> main</span> <span class="prompt-symbol">❯</span> <span class="command" id="cmd-9"></span><br>
+            <div id="res-9" style="display: none; color: #27c93f; margin-top: 5px; white-space: pre-wrap;">
+{{ _('“Talk is cheap. Show me the code.” — Linus Torvalds') }}
+            </div>
+        </div>
+            <div id="final-prompt" style="display: none;">
+                <span class="prompt">nurefexc@freelance</span> <span class="prompt-dir">~/portfolio</span> <span class="prompt-git"> main</span> <span class="prompt-symbol">❯</span><span class="cursor"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="cv-highlight" id="cv-section" style="display: none;">
+        <a href="/cv?lang={{ lang }}" class="cv-btn">
+            <i class="fas fa-file-alt"></i> {{ _('View My Full CV') }}
+        </a>
+    </div>
+
+    <div class="links">
+        <a href="/cv?lang={{ lang }}" title="{{ _('View My CV') }}">
+            <i class="fas fa-file-alt"></i>
+        </a>
+        <a href="https://{{ personal.github }}" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://{{ personal.linkedin }}" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://{{ personal.website }}" target="_blank" title="{{ _('Website') }}">
+            <i class="fas fa-globe"></i>
+        </a>
+        <a href="mailto:{{ personal.email }}" target="_blank" title="{{ _('Contact Me') }}">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://matrix.to/#/{{ personal.matrix }}" target="_blank" title="Matrix">
+            <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align: middle;"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+        </a>
+        <a href="{{ url_for('contact_vcf') }}" title="{{ _('Save Contact') }}">
+            <i class="fas fa-id-badge"></i>
+        </a>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="{{ personal.github }}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="{{ personal.linkedin }}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://{{ personal.website }}" target="_blank" title="{{ _('Website') }}"><i class="fas fa-globe"></i></a>
+            <a href="mailto:{{ personal.email }}" target="_blank" title="{{ _('Contact Me') }}"><i class="fas fa-envelope"></i></a>
+            <a href="https://matrix.to/#/{{ personal.matrix }}" target="_blank" title="Matrix"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align: middle;"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></a>
+            <a href="{{ url_for('contact_vcf') }}" title="{{ _('Save Contact') }}"><i class="fas fa-id-badge"></i></a>
+        </div>
+        <div class="footer-text">
+            &copy; 2026 {{ personal.full_name }} | {{ personal.title }}
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/terminal.js') }}"></script>
+</body>
+</html>

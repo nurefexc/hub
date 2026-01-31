@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: hu\n"
+
+msgid "Python"
+msgstr "Python"
+
+msgid "C#"
+msgstr "C#"
+
+msgid "C++"
+msgstr "C++"
+
+msgid "C"
+msgstr "C"
+
+msgid "Harbour"
+msgstr "Harbour"
+
+msgid "JavaScript (Node.js)"
+msgstr "JavaScript (Node.js)"
+
+msgid "Specialties"
+msgstr "Szakterületek"
+
+msgid "Odoo ORM"
+msgstr "Odoo ORM"
+
+msgid "ERP Business Logic"
+msgstr "ERP üzleti logika"
+
+msgid "System Integration"
+msgstr "Rendszerintegráció"
+
+msgid "XPath / XML / JSON"
+msgstr "XPath / XML / JSON"
+
+msgid "Tools"
+msgstr "Eszközök"
+
+msgid "Linux"
+msgstr "Linux"
+
+msgid "Programming Languages"
+msgstr "Programozási nyelvek"
+
+msgid "Databases"
+msgstr "Adatbázisok"
+
+msgid "MSSQL (T-SQL)"
+msgstr "MSSQL (T-SQL)"
+
+msgid "Oracle SQL"
+msgstr "Oracle SQL"
