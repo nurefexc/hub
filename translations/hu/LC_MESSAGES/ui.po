@@ -6,6 +6,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: hu\n"
 
+msgid "Home"
+msgstr "Főoldal"
+
 msgid "View My CV"
 msgstr "Önéletrajz megtekintése"
 
@@ -47,6 +50,12 @@ msgstr "Készségek"
 
 msgid "Contact"
 msgstr "Kapcsolat"
+
+msgid "Back"
+msgstr "Vissza"
+
+msgid "Contact Information"
+msgstr "Elérhetőségek"
 
 msgid "GitHub Profile"
 msgstr "GitHub profil"
@@ -107,6 +116,30 @@ msgstr "Nyílt forráskódú projekt"
 
 msgid "Save Contact"
 msgstr "Kapcsolat mentése"
+
+msgid "Call"
+msgstr "Hívás"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Matrix"
+msgstr "Matrix"
+
+msgid "Save"
+msgstr "Mentés"
+
+msgid "Mobile"
+msgstr "Mobil"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+msgid "Address"
+msgstr "Cím"
 
 msgid "Terminal status: Always open. If you see this, I'm probably in a tmux session right now."
 msgstr "Terminál állapot: Mindig nyitva. Ha ezt látod, valószínűleg épp egy tmux session-ben vagyok."

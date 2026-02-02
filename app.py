@@ -97,6 +97,11 @@ def cv():
     data = get_all_data()
     return render_template('cv.html', **data)
 
+@app.route('/contact')
+def contact():
+    data = get_all_data()
+    return render_template('contact.html', **data)
+
 @app.route('/cv.pdf')
 def cv_pdf():
     # Force locale for PDF generation if needed, or use get_locale()

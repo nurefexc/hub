@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ _('Contact') }} - {{ personal.full_name }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <div class="contact-container">
+        <a href="/?lang={{ lang }}" class="back-link"><i class="fas fa-arrow-left"></i> {{ _('Back') }}</a>
+        
+        <div class="phonebook-window">
+            <div class="phonebook-header">
+                <div class="profile-section">
+                    <div class="avatar-wrapper">
+                        <img src="{{ url_for('static', filename=personal.profile_image) }}" alt="{{ personal.full_name }}" class="phonebook-avatar">
+                    </div>
+                    <h1>{{ personal.full_name }}</h1>
+                    <p class="phonebook-subtitle">{{ personal.title }}</p>
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="tel:{{ personal.phone }}" class="action-btn" title="{{ _('Call') }}">
+                        <i class="fas fa-phone"></i>
+                        <span>{{ _('Call') }}</span>
+                    </a>
+                    <a href="mailto:{{ personal.email }}" class="action-btn" title="{{ _('Email') }}">
+                        <i class="fas fa-envelope"></i>
+                        <span>{{ _('Email') }}</span>
+                    </a>
+                    <a href="https://matrix.to/#/{{ personal.matrix }}" target="_blank" class="action-btn" title="Matrix">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>{{ _('Matrix') }}</span>
+                    </a>
+                    <a href="{{ url_for('contact_vcf', lang=lang) }}" class="action-btn save-btn" title="{{ _('Save') }}">
+                        <i class="fas fa-user-plus"></i>
+                        <span>{{ _('Save') }}</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="phonebook-body">
+                <div class="info-group">
+                    <label>{{ _('Mobile') }}</label>
+                    <div class="info-value">
+                        <a href="tel:{{ personal.phone }}">{{ personal.phone }}</a>
+                    </div>
+                </div>
+
+                <div class="info-group">
+                    <label>{{ _('Email') }}</label>
+                    <div class="info-value">
+                        <a href="mailto:{{ personal.email }}">{{ personal.email }}</a>
+                    </div>
+                </div>
+
+                <div class="info-group">
+                    <label>{{ _('GitHub') }}</label>
+                    <div class="info-value">
+                        <a href="{{ personal.github }}" target="_blank">github.com/nurefexc</a>
+                    </div>
+                </div>
+
+                <div class="info-group">
+                    <label>{{ _('LinkedIn') }}</label>
+                    <div class="info-value">
+                        <a href="{{ personal.linkedin }}" target="_blank">linkedin.com/in/miklós-zsitva</a>
+                    </div>
+                </div>
+
+                <div class="info-group">
+                    <label>{{ _('Matrix') }}</label>
+                    <div class="info-value">
+                        <a href="https://matrix.to/#/{{ personal.matrix }}" target="_blank">{{ personal.matrix }}</a>
+                    </div>
+                </div>
+
+                <div class="info-group">
+                    <label>{{ _('Website') }}</label>
+                    <div class="info-value">
+                        <a href="https://{{ personal.website }}" target="_blank">https://{{ personal.website }}</a>
+                    </div>
+                </div>
+
+                <div class="info-group">
+                    <label>{{ _('Address') }}</label>
+                    <div class="info-value">
+                        <span>{{ _(personal.address) }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+</body>
+</html>

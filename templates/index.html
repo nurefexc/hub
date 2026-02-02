@@ -36,20 +36,18 @@
     <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
 </head>
 <body>
-    <div class="top-nav">
-        <a href="/cv?lang={{ lang }}" class="static-cv-link" title="{{ _('View My CV') }}">
-            <i class="fas fa-file-alt"></i> <span>CV</span>
-        </a>
-        <a href="/?lang={{ 'hu' if lang == 'en' else 'en' }}" class="lang-btn">
-            {{ 'Magyar' if lang == 'en' else 'English' }}
-        </a>
-    </div>
+    {% include 'header.html' %}
 
     <div class="terminal-window">
         <div class="terminal-header">
             <div class="terminal-title">
                 <i class="fas fa-terminal"></i>
                 <span>zsh — nurefexc@portfolio</span>
+            </div>
+            <div class="terminal-controls">
+                <div class="control minimize"></div>
+                <div class="control maximize"></div>
+                <div class="control close"></div>
             </div>
         </div>
         <div class="terminal-body" id="terminal-body">
@@ -92,7 +90,7 @@
                     <li class="info-item"><span class="info-key">Shell</span>: <a href="https://github.com/nurefexc/env-craft" target="_blank" style="color: inherit; text-decoration: underline;">{{ _('zsh (env-craft)') }}</a></li>
                     <li class="info-item"><span class="info-key">Role</span>: {{ personal.title }}</li>
                     <li class="info-item"><span class="info-key">Status</span>: {{ _('Available for Projects (B2B)') }}</li>
-                    <li class="info-item"><span class="info-key">Matrix</span>: <a href="https://matrix.to/#/{{ personal.matrix }}" target="_blank" class="matrix-link"><i class="fa-brands fa-matrix-org"></i> {{ personal.matrix }}</a></li>
+                    <li class="info-item"><span class="info-key">Matrix</span>: <a href="https://matrix.to/#/{{ personal.matrix }}" target="_blank" class="matrix-link"><i class="fas fa-paper-plane"></i> {{ personal.matrix }}</a></li>
                     <li class="info-item"><span class="info-key">Website</span>: <a href="https://{{ personal.website }}" target="_blank" style="color: inherit; text-decoration: underline;"><i class="fas fa-globe"></i> https://{{ personal.website }}</a></li>
                 </ul>
             </div>
@@ -222,6 +220,9 @@
         <a href="/cv?lang={{ lang }}" title="{{ _('View My CV') }}">
             <i class="fas fa-file-alt"></i>
         </a>
+        <a href="/contact?lang={{ lang }}" title="{{ _('Contact') }}">
+            <i class="fas fa-envelope"></i>
+        </a>
         <a href="https://{{ personal.github }}" target="_blank" title="GitHub">
             <i class="fab fa-github"></i>
         </a>
@@ -235,26 +236,14 @@
             <i class="fas fa-envelope"></i>
         </a>
         <a href="https://matrix.to/#/{{ personal.matrix }}" target="_blank" title="Matrix">
-            <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align: middle;"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+            <i class="fas fa-paper-plane"></i>
         </a>
         <a href="{{ url_for('contact_vcf', lang=lang) }}" title="{{ _('Save Contact') }}">
             <i class="fas fa-id-badge"></i>
         </a>
     </div>
 
-    <footer>
-        <div class="footer-links">
-            <a href="{{ personal.github }}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="{{ personal.linkedin }}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://{{ personal.website }}" target="_blank" title="{{ _('Website') }}"><i class="fas fa-globe"></i></a>
-            <a href="mailto:{{ personal.email }}" target="_blank" title="{{ _('Contact Me') }}"><i class="fas fa-envelope"></i></a>
-            <a href="https://matrix.to/#/{{ personal.matrix }}" target="_blank" title="Matrix"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align: middle;"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></a>
-            <a href="{{ url_for('contact_vcf', lang=lang) }}" title="{{ _('Save Contact') }}"><i class="fas fa-id-badge"></i></a>
-        </div>
-        <div class="footer-text">
-            &copy; 2026 {{ personal.full_name }} | {{ personal.title }}
-        </div>
-    </footer>
+    {% include 'footer.html' %}
 
     <script src="{{ url_for('static', filename='js/terminal.js') }}"></script>
 </body>

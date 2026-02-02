@@ -1,0 +1,16 @@
+<div class="top-nav">
+    <div class="nav-links">
+        <a href="/?lang={{ lang }}" class="static-cv-link" title="{{ _('Home') }}">
+            <i class="fas fa-home"></i> <span>{{ _('Home') }}</span>
+        </a>
+        <a href="/cv?lang={{ lang }}" class="static-cv-link" title="{{ _('View My CV') }}">
+            <i class="fas fa-file-alt"></i> <span>CV</span>
+        </a>
+        <a href="/contact?lang={{ lang }}" class="static-cv-link" title="{{ _('Contact') }}">
+            <i class="fas fa-envelope"></i> <span>{{ _('Contact') }}</span>
+        </a>
+    </div>
+    <a href="{{ request.path }}?lang={{ 'hu' if lang == 'en' else 'en' }}" class="lang-btn">
+        {{ 'Magyar' if lang == 'en' else 'English' }}
+    </a>
+</div>

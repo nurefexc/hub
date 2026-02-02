@@ -1,0 +1,13 @@
+<footer>
+    <div class="footer-links">
+        <a href="{{ personal.github }}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="{{ personal.linkedin }}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://{{ personal.website }}" target="_blank" title="{{ _('Website') }}"><i class="fas fa-globe"></i></a>
+        <a href="mailto:{{ personal.email }}" target="_blank" title="{{ _('Contact Me') }}"><i class="fas fa-envelope"></i></a>
+        <a href="https://matrix.to/#/{{ personal.matrix }}" target="_blank" title="Matrix"><i class="fas fa-paper-plane"></i></a>
+        <a href="{{ url_for('contact_vcf', lang=lang) }}" title="{{ _('Save Contact') }}"><i class="fas fa-id-badge"></i></a>
+    </div>
+    <div class="footer-text">
+        &copy; 2026 {{ personal.full_name }} | {{ personal.title }}
+    </div>
+</footer>
