@@ -6,6 +6,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: hu\n"
 
+msgid "Software Developer | ERP Solutions Contractor & Architect"
+msgstr "Szoftverfejlesztő | ERP megoldások kivitelezője és architektje"
+
 msgid "Hungary"
 msgstr "Magyarország"
 

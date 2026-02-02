@@ -13,51 +13,64 @@
 body {
     font-family: 'Fira Code', monospace;
     margin: 0;
-    padding: 80px 20px 20px 20px;
+    padding: 100px 20px 40px 20px;
     background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
-    color: var(--text-main);
-    min-height: 100vh;
+    background-attachment: fixed;
+    animation: gradientBG 15s ease infinite;
+    background-size: 400% 400%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
+    min-height: 100vh;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .terminal-window {
-    background: rgba(30, 41, 59, 0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-radius: 12px;
     width: 100%;
     max-width: 900px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .terminal-header {
-    background: var(--term-header);
-    padding: 12px 18px;
+    background: #2d3436;
+    padding: 10px 18px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    z-index: 10;
 }
 
-.dot { width: 14px; height: 14px; border-radius: 50%; transition: transform 0.2s; }
-.dot:hover { transform: scale(1.1); }
-.dot.red { background: #ff5f56; box-shadow: 0 0 8px rgba(255, 95, 86, 0.5); }
-.dot.yellow { background: #ffbd2e; box-shadow: 0 0 8px rgba(255, 189, 46, 0.5); }
-.dot.green { background: #27c93f; box-shadow: 0 0 8px rgba(39, 201, 63, 0.5); }
 
 .terminal-title {
-    margin-left: 10px;
-    font-size: 0.85rem;
-    color: var(--text-dim);
-    font-weight: 500;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    color: #a29bfe;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.terminal-title i {
+    color: #fdcb6e;
 }
 
 .terminal-body {
     padding: 25px;
-    font-size: 1rem;
+    font-size: 1.05rem;
+    color: #f8fafc;
     line-height: 1.6;
     height: 550px;
     overflow-y: auto;
@@ -71,8 +84,8 @@ body {
 .prompt { color: var(--prompt-user); font-weight: bold; }
 .prompt-dir { color: var(--prompt-dir); }
 .prompt-git { color: var(--git-branch); }
-.prompt-symbol { color: #fff; font-weight: bold; }
-.command { color: #fff; }
+.prompt-symbol { color: var(--primary-color); font-weight: bold; }
+.command { color: #fff; text-shadow: 0 0 8px rgba(255, 255, 255, 0.4); font-weight: 500; }
 .output { margin-bottom: 25px; display: none; }
 
 .neofetch {
@@ -90,7 +103,7 @@ body {
 }
 
 .info-list { list-style: none; padding: 0; margin: 0; }
-.info-item { margin-bottom: 6px; }
+.info-item { color: var(--text-main); margin-bottom: 6px; }
 .info-key { color: var(--primary-color); font-weight: bold; }
 
 .matrix-link {
@@ -270,12 +283,12 @@ body {
 }
 
 footer {
-    margin-top: 40px;
+    margin-top: 60px;
     width: 100%;
     max-width: 900px;
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 30px;
+    padding: 40px 0;
 }
 
 .footer-links {
@@ -308,12 +321,13 @@ footer {
     left: 0;
     right: 0;
     padding: 12px 24px;
-    background: rgba(15, 23, 42, 0.85);
-    backdrop-filter: blur(12px);
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
+    z-index: 9999;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -359,11 +373,11 @@ footer {
 .lang-btn:hover { background: rgba(255, 255, 255, 0.1); color: var(--text-main); border-color: var(--primary-color); }
 
 @media (max-width: 768px) {
-    body { padding: 10px; }
+    body { padding-top: 100px; padding-left: 15px; padding-right: 15px; }
     .terminal-window { border-radius: 8px; }
     .terminal-header { padding: 8px 12px; }
     .neofetch { flex-direction: column; gap: 15px; align-items: center; text-align: center; }
-    .top-nav { margin-top: 10px; margin-bottom: 10px; }
+    .top-nav { margin: 0; }
     .terminal-body { height: auto; max-height: 70vh; padding: 12px; font-size: 0.85rem; }
     .ascii-art { font-size: 0.5rem; line-height: 1; }
     .info-list { font-size: 0.8rem; display: inline-block; text-align: left; }

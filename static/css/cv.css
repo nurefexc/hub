@@ -95,14 +95,16 @@ body {
 
 @media print {
     .cv-header { display: block; position: relative; min-height: 140px; }
-    .header-left { width: 75%; }
-    .profile-img { position: absolute; top: 0; right: 0; }
+    .header-left { width: 75%; display: inline-block; vertical-align: top; }
+    .profile-img { position: absolute; top: 10mm; right: 0; }
     
-    .contact-grid { display: block; }
-    .contact-item { display: inline-block; width: 48%; margin-bottom: 5px; vertical-align: top; }
+    .contact-grid { display: block !important; width: 100% !important; padding-top: 10px; }
+    .contact-item { display: inline-block !important; width: 48% !important; margin-bottom: 5px !important; vertical-align: top; }
     .contact-item i { display: inline-block; margin-right: 5px; }
+    
+    section { clear: both; width: 100%; }
 
-    h2 { display: block; }
+    h2 { display: block; clear: both; width: 100%; }
     h2 i { display: inline-block; margin-right: 10px; vertical-align: middle; }
 
     .item-header { display: block; }

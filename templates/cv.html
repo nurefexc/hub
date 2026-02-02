@@ -25,6 +25,7 @@
     <div class="no-print">
         <a href="/?lang={{ lang }}" class="btn-minimal" title="{{ _('Back to Home') }}"><i class="fas fa-arrow-left"></i></a>
         <a href="/cv.pdf?lang={{ lang }}" class="btn-minimal" title="{{ _('Download PDF') }}"><i class="fas fa-file-pdf"></i></a>
+        <a href="{{ url_for('contact_vcf', lang=lang) }}" class="btn-minimal" title="{{ _('Save Contact') }}"><i class="fas fa-id-badge"></i></a>
     </div>
 
     <main class="page">

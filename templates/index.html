@@ -47,10 +47,10 @@
 
     <div class="terminal-window">
         <div class="terminal-header">
-            <div class="dot red"></div>
-            <div class="dot yellow"></div>
-            <div class="dot green"></div>
-            <div class="terminal-title">env-craft zsh — ~/portfolio (main)</div>
+            <div class="terminal-title">
+                <i class="fas fa-terminal"></i>
+                <span>zsh — nurefexc@portfolio</span>
+            </div>
         </div>
         <div class="terminal-body" id="terminal-body">
             <div class="output" id="out-1">
@@ -237,7 +237,7 @@
         <a href="https://matrix.to/#/{{ personal.matrix }}" target="_blank" title="Matrix">
             <svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align: middle;"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
         </a>
-        <a href="{{ url_for('contact_vcf') }}" title="{{ _('Save Contact') }}">
+        <a href="{{ url_for('contact_vcf', lang=lang) }}" title="{{ _('Save Contact') }}">
             <i class="fas fa-id-badge"></i>
         </a>
     </div>
@@ -249,7 +249,7 @@
             <a href="https://{{ personal.website }}" target="_blank" title="{{ _('Website') }}"><i class="fas fa-globe"></i></a>
             <a href="mailto:{{ personal.email }}" target="_blank" title="{{ _('Contact Me') }}"><i class="fas fa-envelope"></i></a>
             <a href="https://matrix.to/#/{{ personal.matrix }}" target="_blank" title="Matrix"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" style="vertical-align: middle;"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></a>
-            <a href="{{ url_for('contact_vcf') }}" title="{{ _('Save Contact') }}"><i class="fas fa-id-badge"></i></a>
+            <a href="{{ url_for('contact_vcf', lang=lang) }}" title="{{ _('Save Contact') }}"><i class="fas fa-id-badge"></i></a>
         </div>
         <div class="footer-text">
             &copy; 2026 {{ personal.full_name }} | {{ personal.title }}

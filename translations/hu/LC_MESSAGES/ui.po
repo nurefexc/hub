@@ -105,6 +105,9 @@ msgstr "Egy erősen optimalizált, fejlesztőbarát zsh konfiguráció. Nyugodta
 msgid "Open Source Project"
 msgstr "Nyílt forráskódú projekt"
 
+msgid "Save Contact"
+msgstr "Kapcsolat mentése"
+
 msgid "Terminal status: Always open. If you see this, I'm probably in a tmux session right now."
 msgstr "Terminál állapot: Mindig nyitva. Ha ezt látod, valószínűleg épp egy tmux session-ben vagyok."
 
