@@ -1,0 +1,6 @@
+{
+  "title": "VCF Smart Contacts",
+  "icon": "id-badge",
+  "tech": ["VCF", "OIDC", "Python", "Flask", "NFC"],
+  "order": 4
+}

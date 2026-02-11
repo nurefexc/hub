@@ -1,0 +1,1 @@
+Custom module development and performance tuning for Odoo environments. I specialize in rescuing stalled implementations and optimizing business logic.

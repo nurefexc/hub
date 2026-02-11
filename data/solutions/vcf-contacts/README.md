@@ -1,0 +1,1 @@
+Dynamic server-side VCF generation with per-contact logic, integrated with identity and NFC workflows.

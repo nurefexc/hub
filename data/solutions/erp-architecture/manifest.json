@@ -1,0 +1,6 @@
+{
+    "title": "ERP Architecture & Odoo Modernization",
+    "icon": "database",
+    "tech": ["Python", "Odoo ORM", "PostgreSQL", "XML/XPath"],
+    "order": 1
+}

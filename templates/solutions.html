@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ _('Solutions') }} | {{ personal.full_name }}</title>
+    <meta name="description" content="{{ _('Strategic software engineering for complex ecosystems — explore solutions: ERP, Legacy Integration, Web, Data, DevOps.') }}">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ _('Solutions') }} | {{ personal.full_name }}">
+    <meta property="og:description" content="{{ _('Strategic software engineering for complex ecosystems — explore solutions: ERP, Legacy Integration, Web, Data, DevOps.') }}">
+    <meta property="og:url" content="https://nurefexc.com{{ request.path }}?lang={{ lang }}">
+    <meta property="og:image" content="{{ url_for('static', filename='android-chrome-512x512.png', _external=True) }}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ _('Solutions') }} | {{ personal.full_name }}">
+    <meta name="twitter:description" content="{{ _('Strategic software engineering for complex ecosystems — explore solutions: ERP, Legacy Integration, Web, Data, DevOps.') }}">
+    <meta name="twitter:image" content="{{ url_for('static', filename='android-chrome-512x512.png', _external=True) }}">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nurefexc.com{{ request.path }}?lang={{ lang }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+    <style>
+        :root {
+            --bg-dark: #0d1117;
+            --card-bg: #161b22;
+            --accent-green: #2ea043;
+            --border-muted: #30363d;
+            --text-main: #c9d1d9;
+            --text-bright: #ffffff;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 4rem 0;
+            border-left: 4px solid var(--accent-green);
+            padding-left: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .hero-section h1 {
+            font-size: clamp(2rem, 8vw, 3.5rem);
+            font-weight: 800;
+            color: var(--text-bright);
+            margin: 0 0 1rem 0;
+        }
+
+        .hero-section p {
+            font-size: clamp(1rem, 4vw, 1.25rem);
+            color: #8b949e;
+            max-width: 800px;
+        }
+
+        /* Solutions Grid */
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .solution-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-muted);
+            border-radius: 12px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .solution-card:hover {
+            border-color: var(--accent-green);
+            transform: translateY(-5px);
+        }
+
+        .solution-card i {
+            font-size: 1.75rem;
+            color: var(--accent-green);
+            margin-bottom: 1.25rem;
+        }
+
+        .solution-card h2 {
+            font-size: 1.35rem;
+            color: var(--text-bright);
+            margin: 0 0 1rem 0;
+        }
+
+        .solution-card p {
+            font-size: 0.95rem;
+            color: #8b949e;
+            flex-grow: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Tech Badges */
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tech-badge {
+            background: rgba(46, 160, 67, 0.1);
+            color: var(--accent-green);
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-family: 'Fira Code', monospace;
+            border: 1px solid rgba(46, 160, 67, 0.2);
+        }
+
+        /* Methodology Section */
+        .methodology {
+            margin-top: 6rem;
+            background: #11161d;
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-muted);
+        }
+
+        .methodology h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.8rem;
+            color: var(--text-bright);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .step-item { position: relative; }
+        .step-num {
+            color: var(--accent-green);
+            font-weight: 800;
+            font-size: 1.2rem;
+            font-family: 'Fira Code', monospace;
+        }
+
+        /* CTA Section - Fixed Button Responsivity */
+        .cta-box {
+            margin: 6rem 0;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--accent-green);
+            color: #ffffff;
+            padding: 1.2rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: background 0.2s, transform 0.1s;
+            max-width: 100%; /* Megakadályozza a túllógást */
+            box-sizing: border-box;
+            white-space: normal; /* Engedi a tördelést ha túl hosszú a szöveg */
+            word-wrap: break-word;
+        }
+
+        .btn-primary:hover {
+            background: #3fb950;
+            transform: scale(1.02);
+        }
+
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+
+        @media (max-width: 600px) {
+            .hero-section { padding: 2rem 0 2rem 1rem; }
+            .solution-card { padding: 1.5rem; }
+            .methodology { padding: 2rem 1rem; }
+            .btn-primary { width: 100%; } /* Mobilon teljes szélesség a kényelmes kattintáshoz */
+        }
+        /* --- Mobile overflow fixes (session 2026-02-11) --- */
+        html, body { max-width: 100%; overflow-x: hidden; }
+        .solutions-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+        .solution-card, .tech-list { min-width: 0; }
+        @media (max-width: 360px) {
+            .solutions-grid { grid-template-columns: 1fr; }
+            .container { padding-left: 12px; padding-right: 12px; }
+        }
+    </style>
+</head>
+<body>
+    {% include 'header.html' %}
+
+    <main class="container">
+        <section class="hero-section">
+            <h1>{{ _('Solutions') }}</h1>
+            <p>{{ _('Strategic software engineering for complex business ecosystems. I provide the technical depth required to build, integrate, and maintain high-availability systems.') }}</p>
+        </section>
+
+        <div class="solutions-grid">
+            {% for offering in offerings %}
+            <article class="solution-card">
+                <h2>{{ _(offering.title) }}</h2>
+                <p>{{ _(offering.description) }}</p>
+                <div class="tech-list">
+                    {% for tech in offering.tech %}
+                    <span class="tech-badge">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+
+        <section class="methodology">
+            <h2>{{ _('Operational Methodology') }}</h2>
+            <div class="steps">
+                <div class="step-item">
+                    <span class="step-num">01. Discovery</span>
+                    <p>{{ _('Technical audit and deep-dive into the existing ecosystem.') }}</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-num">02. Architecture</span>
+                    <p>{{ _('Designing robust, scalable, and documented solutions.') }}</p>
+                </div>
+                <div class="step-item">
+                    <span class="step-num">03. Execution</span>
+                    <p>{{ _('Agile development with a focus on reliability and security.') }}</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta-box">
+            <a href="/contact?lang={{ lang }}" class="btn-primary">
+                {{ _('Initialize Professional Handshake') }}
+            </a>
+        </div>
+    </main>
+
+    {% include 'footer.html' %}
+</body>
+</html>

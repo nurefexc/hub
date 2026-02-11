@@ -158,3 +158,134 @@ msgstr "Zártkörű B2B megoldás"
 
 msgid "A secure, in-house record-keeping (protocol) system developed for a non-profit organization as part of their ERP solution. Focused on data integrity and specialized workflows."
 msgstr "Egy civil szervezet számára fejlesztett, vállalatirányítási rendszerbe integrált jegyzőkönyvvezető szoftver. Kiemelt fókusszal az adatintegritásra és speciális munkafolyamatokra."
+
+# Solutions page translations
+msgid "Solutions"
+msgstr "Megoldások"
+
+msgid "Strategic software engineering for complex business ecosystems. I provide the technical depth required to build, integrate, and maintain high-availability systems."
+msgstr "Stratégiai szoftvermérnöki támogatás összetett üzleti ökoszisztémákhoz. A szükséges technikai mélységet biztosítom a magas rendelkezésre állású rendszerek építéséhez, integrálásához és üzemeltetéséhez."
+
+msgid "ERP Architecture & Odoo"
+msgstr "ERP architektúra és Odoo"
+
+msgid "End-to-end implementation focusing on core business logic, performance optimization, and seamless module integration."
+msgstr "Végponttól végpontig megvalósítás az üzleti logika, a teljesítményoptimalizálás és a zökkenőmentes modulintegráció fókuszával."
+
+msgid "Full-Stack Web Engineering"
+msgstr "Full-stack webfejlesztés"
+
+msgid "Building scalable, secure web applications and internal tools. High-performance backends meet clean, professional interfaces."
+msgstr "Skálázható, biztonságos webalkalmazások és belső eszközök fejlesztése. Nagy teljesítményű back-endek tiszta, professzionális felületekkel."
+
+msgid "NFC & Identity Systems"
+msgstr "NFC és személyazonosítási rendszerek"
+
+msgid "Engineering physical-to-digital bridges. Custom NFC-integrated identity solutions with dynamic server-side VCF generation and proximity-based logic."
+msgstr "Fizikai és digitális világ közötti hidak tervezése. Egyedi, NFC-integrált személyazonosítási megoldások dinamikus szerveroldali VCF generálással és közelségalapú logikával."
+
+msgid "Legacy Modernization"
+msgstr "Legacy rendszerek modernizálása"
+
+msgid "Interfacing decades-old systems with modern web infrastructures. Deep expertise in C, C++, and Harbour (specialized C-fork) environments."
+msgstr "Évtizedes rendszerek összekapcsolása modern webes infrastruktúrákkal. Mély szakértelem C, C++ és Harbour (speciális C-elágazás) környezetekben."
+
+msgid "System Integration & APIs"
+msgstr "Rendszerintegráció és API-k"
+
+msgid "Designing high-throughput API gateways. Ensuring secure communication between fragmented B2B software ecosystems."
+msgstr "Nagy áteresztőképességű API-átjárók tervezése. Biztonságos kommunikáció biztosítása töredezett B2B szoftverökoszisztémák között."
+
+msgid "Secure Communication"
+msgstr "Biztonságos kommunikáció"
+
+msgid "Deploying and automating decentralized communication infrastructures using Matrix. Custom bridges and end-to-end encrypted bots."
+msgstr "Decentralizált kommunikációs infrastruktúra telepítése és automatizálása Matrix alapokon. Egyedi hidak és végponttól végpontig titkosított botok."
+
+msgid "Custom Tooling"
+msgstr "Egyedi eszközök"
+
+msgid "Developing low-level, high-performance tools like custom Markdown parsers. Solving problems where off-the-shelf software fails."
+msgstr "Alacsony szintű, nagy teljesítményű eszközök fejlesztése, például egyedi Markdown parsolók. Ott oldok meg problémákat, ahol a dobozos szoftverek elvéreznek."
+
+msgid "Database Architecture"
+msgstr "Adatbázis-architektúra"
+
+msgid "Beyond simple CRUD: Query optimization, indexing strategies, and ETL processes for complex SQL environments."
+msgstr "Egyszerű CRUD-on túl: lekérdezés-optimalizálás, indexelési stratégiák és ETL folyamatok összetett SQL környezetekhez."
+
+msgid "Infrastructure & DevOps"
+msgstr "Infrastruktúra és DevOps"
+
+msgid "Building reproducible, isolated environments. Focusing on containerization and Linux-native stability for critical delivery."
+msgstr "Reprodukálható, izolált környezetek építése. Konténerizációra és a Linux-native stabilitásra fókuszálok kritikus szállításoknál."
+
+msgid "Operational Methodology"
+msgstr "Működési metodológia"
+
+msgid "Technical audit and deep-dive into the existing ecosystem."
+msgstr "Technikai audit és mélymerülés a meglévő ökoszisztémában."
+
+msgid "Designing robust, scalable, and documented solutions."
+msgstr "Robusztus, skálázható és dokumentált megoldások tervezése."
+
+msgid "Agile development with a focus on reliability and security."
+msgstr "Agilis fejlesztés a megbízhatóság és a biztonság fókuszával."
+
+msgid "Initialize Professional Handshake"
+msgstr "Szakmai egyeztetés indítása"
+
+# Contact specific additions
+msgid "Back to Terminal"
+msgstr "Vissza a terminálhoz"
+
+msgid "Matrix ID"
+msgstr "Matrix azonosító"
+
+msgid "Availability"
+msgstr "Elérhetőség"
+
+msgid "Available for B2B Contracts"
+msgstr "B2B szerződéses munkára elérhető"
+
+# Solutions - titles
+msgid "ERP Architecture & Odoo Modernization"
+msgstr "ERP architektúra és Odoo modernizáció"
+
+msgid "Legacy System Integration"
+msgstr "Legacy rendszerek integrációja"
+
+msgid "B2B Automation & System Bridges"
+msgstr "B2B automatizálás és rendszerhidak"
+
+# Solutions - descriptions (from README.md)
+msgid "Custom module development and performance tuning for Odoo environments. I specialize in rescuing stalled implementations and optimizing business logic."
+msgstr "Egyedi modulfejlesztés és teljesítményhangolás Odoo környezetekben. Elakadt bevezetések megmentésére és az üzleti logika optimalizálására szakosodtam."
+
+msgid "Connecting decades-old business systems with modern infrastructures. Expertise in maintaining and bridging C, C++, and Harbour-based legacy software."
+msgstr "Évtizedes üzleti rendszerek összekapcsolása modern infrastruktúrákkal. Tapasztalat C, C++ és Harbour alapú legacy szoftverek karbantartásában és összekötésében."
+
+msgid "Eliminating manual data entry through custom Python-based automation. Secure and reliable system-to-system communication and protocol handling."
+msgstr "Kézi adatbevitel kiváltása egyedi, Python-alapú automatizálással. Biztonságos és megbízható rendszer–rendszer kommunikáció és protokollkezelés."
+
+
+# Solutions - VCF Smart Contacts
+msgid "VCF Smart Contacts"
+msgstr "VCF okos névjegyek"
+
+msgid "Dynamic server-side VCF generation with per-contact logic, integrated with identity and NFC workflows."
+msgstr "Dinamikus, szerveroldali VCF-generálás egyedi névjegylogikával, identitás- és NFC-folyamatokkal integrálva."
+
+
+# Solutions - additional
+msgid "Data Engineering & ETL Pipelines"
+msgstr "Adatfeldolgozás és ETL folyamatok"
+
+msgid "Designing and operating robust data pipelines: ingestion, transformation, and warehousing. Focus on reliability, observability, and performance at scale."
+msgstr "Masszív adatfolyamatok tervezése és üzemeltetése: beolvasás, transzformáció, adattárház. A megbízhatóságra, megfigyelhetőségre és nagy léptékű teljesítményre fókuszálva."
+
+msgid "Cloud-Native DevOps & CI/CD"
+msgstr "Cloud‑native DevOps és CI/CD"
+
+msgid "Building reproducible environments and automated delivery pipelines. Emphasis on security, monitoring, and operational excellence for critical systems."
+msgstr "Reprodukálható környezetek és automatizált szállítási folyamatok kiépítése. Kiemelt hangsúly a biztonságon, monitorozáson és az operatív kiválóságon kritikus rendszerek esetén."

@@ -1,0 +1,1 @@
+Designing and operating robust data pipelines: ingestion, transformation, and warehousing. Focus on reliability, observability, and performance at scale.

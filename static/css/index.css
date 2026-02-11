@@ -357,6 +357,24 @@ footer {
     gap: 12px;
 }
 
+/* Responsive navigation */
+.nav-toggle {
+    display: none;
+    background: rgba(255,255,255,0.06);
+    color: var(--text-main);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@media (max-width: 920px) {
+    .nav-toggle { display: inline-flex; align-items: center; justify-content: center; }
+    .nav-links { position: absolute; top: 56px; left: 0; right: 0; display: none; flex-direction: column; background: rgba(15,23,42,0.98); padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .nav-links.open { display: flex; }
+    .static-cv-link { width: 100%; justify-content: flex-start; }
+}
+
 .static-cv-link {
     background: rgba(13, 16, 23, 0.6);
     backdrop-filter: blur(8px);
@@ -619,3 +637,34 @@ footer {
     .action-btn i { width: 40px; height: 40px; font-size: 1.1rem; }
     .info-group { padding: 12px 20px; }
 }
+
+
+/* --- Mobile overflow + header polish (session 2026-02-11) --- */
+html, body { max-width: 100%; overflow-x: hidden; }
+img, svg, video { max-width: 100%; height: auto; display: block; }
+
+/* Improve hamburger button look */
+.nav-toggle { border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.06); box-shadow: 0 2px 10px rgba(0,0,0,0.25); }
+.nav-toggle:hover { background: rgba(255,255,255,0.12); }
+
+/* Tidy dropdown panel on mobile */
+@media (max-width: 920px) {
+  .nav-links {
+    top: 56px; left: 12px; right: 12px;
+    border-radius: 10px;
+    gap: 8px;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.35);
+  }
+  .static-cv-link {
+    padding: 12px 14px;
+    border-radius: 8px;
+  }
+  .lang-btn { padding: 8px 12px; }
+}
+
+@media (max-width: 360px) {
+  .top-nav { padding: 10px 12px; }
+}
+
+/* Defensive: avoid accidental horizontal scroll in common sections */
+:where(.terminal-window, .terminal-body, .solutions-grid, .contact-container) { overflow-x: hidden; }

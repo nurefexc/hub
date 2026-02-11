@@ -3,37 +3,37 @@
     {
       "name": "Programming Languages",
       "skill_list": [
-        "Python",
-        "C#",
-        "C++",
-        "C",
-        "Harbour",
-        "JavaScript (Node.js)"
+        {"name": "Python", "icon": "fab fa-python"},
+        {"name": "C#", "icon": "fas fa-code"},
+        {"name": "C++", "icon": "fas fa-code"},
+        {"name": "C", "icon": "fas fa-code"},
+        {"name": "Harbour", "icon": "fas fa-anchor"},
+        {"name": "JavaScript (Node.js)", "icon": "fab fa-node-js"}
       ]
     },
     {
       "name": "Databases",
       "skill_list": [
-        "PostgreSQL",
-        "MSSQL (T-SQL)",
-        "Oracle SQL"
+        {"name": "PostgreSQL", "icon": "fas fa-database"},
+        {"name": "MSSQL (T-SQL)", "icon": "fas fa-database"},
+        {"name": "Oracle SQL", "icon": "fas fa-database"}
       ]
     },
     {
       "name": "Specialties",
       "skill_list": [
-        "Odoo ORM",
-        "ERP Business Logic",
-        "System Integration",
-        "XPath / XML / JSON"
+        {"name": "Odoo ORM", "icon": "fas fa-puzzle-piece"},
+        {"name": "ERP Business Logic", "icon": "fas fa-briefcase"},
+        {"name": "System Integration", "icon": "fas fa-network-wired"},
+        {"name": "XPath / XML / JSON", "icon": "fas fa-file-code"}
       ]
     },
     {
       "name": "Tools",
       "skill_list": [
-        "Docker",
-        "Git",
-        "Linux"
+        {"name": "Docker", "icon": "fab fa-docker"},
+        {"name": "Git", "icon": "fab fa-git-alt"},
+        {"name": "Linux", "icon": "fab fa-linux"}
       ]
     }
   ]

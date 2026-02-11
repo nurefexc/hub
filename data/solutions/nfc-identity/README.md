@@ -1,0 +1,1 @@
+Engineering physical-to-digital bridges. Custom NFC-integrated identity solutions with dynamic server-side VCF generation and proximity-based logic.

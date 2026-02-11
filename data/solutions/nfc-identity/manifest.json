@@ -1,0 +1,6 @@
+{
+  "title": "NFC & Identity Systems",
+  "icon": "id-card",
+  "tech": ["NFC", "VCF", "OIDC", "Python", "Flask"],
+  "order": 5
+}

@@ -1,0 +1,6 @@
+{
+    "title": "B2B Automation & System Bridges",
+    "icon": "microchip",
+    "tech": ["Node.js", "Python", "JSON-RPC", "Docker"],
+    "order": 3
+}

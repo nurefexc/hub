@@ -4,43 +4,249 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ _('Contact') }} - {{ personal.full_name }}</title>
+    <meta name="description" content="{{ _('Get in touch with') }} {{ personal.full_name }} — {{ personal.title }}. {{ _('Phone, email, Matrix, and VCF download.') }}">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ _('Contact') }} - {{ personal.full_name }}">
+    <meta property="og:description" content="{{ _('Get in touch with') }} {{ personal.full_name }} — {{ personal.title }}.">
+    <meta property="og:url" content="https://nurefexc.com{{ request.path }}?lang={{ lang }}">
+    <meta property="og:image" content="{{ url_for('static', filename='android-chrome-512x512.png', _external=True) }}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ _('Contact') }} - {{ personal.full_name }}">
+    <meta name="twitter:description" content="{{ _('Get in touch with') }} {{ personal.full_name }} — {{ personal.title }}.">
+    <meta name="twitter:image" content="{{ url_for('static', filename='android-chrome-512x512.png', _external=True) }}">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nurefexc.com{{ request.path }}?lang={{ lang }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+    <style>
+        :root {
+            --bg-dark: #0d1117;
+            --card-bg: #161b22;
+            --accent-green: #2ea043;
+            --border-muted: #30363d;
+            --text-main: #c9d1d9;
+            --text-bright: #ffffff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding-top: 80px; /* fix: account for fixed header height so content isn't hidden */
+        }
+
+        .contact-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+            min-height: calc(100dvh - 140px); /* ensure vertical centering across devices (header+footer space) */
+        }
+
+        .back-link {
+            align-self: flex-start;
+            max-width: 500px;
+            margin: 0 auto 1.5rem auto;
+            color: #8b949e;
+            text-decoration: none;
+            font-size: 0.9rem;
+            width: 100%;
+        }
+
+        /* Névjegy Kártya Stílus */
+        .phonebook-window {
+            background: var(--card-bg);
+            border: 1px solid var(--border-muted);
+            border-radius: 20px;
+            width: 100%;
+            max-width: 500px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Ensure focusing the card doesn't hide under fixed header */
+        #contact-card { scroll-margin-top: 96px; }
+
+        .phonebook-header {
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(46, 160, 67, 0.05), transparent);
+            border-bottom: 1px solid var(--border-muted);
+        }
+
+        .avatar-wrapper {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.5rem auto;
+            border-radius: 50%;
+            padding: 3px;
+            border: 2px solid var(--accent-green);
+        }
+
+        .phonebook-avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .phonebook-header h1 {
+            color: var(--text-bright);
+            font-size: 1.75rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 800;
+        }
+
+        .phonebook-subtitle {
+            color: var(--accent-green);
+            font-size: 1rem;
+            margin: 0;
+            font-family: 'Fira Code', monospace;
+            font-weight: 500;
+        }
+
+        /* Gyorsgombok (Action Buttons) */
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            background: #21262d;
+            border: 1px solid var(--border-muted);
+            color: var(--text-bright);
+            padding: 0.75rem;
+            border-radius: 12px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            width: 80px;
+            transition: all 0.2s;
+        }
+
+        .action-btn i { font-size: 1.25rem; }
+        .action-btn span { font-size: 0.75rem; font-weight: 600; }
+
+        .action-btn:hover {
+            border-color: var(--accent-green);
+            background: rgba(46, 160, 67, 0.1);
+        }
+
+        .save-btn {
+            background: var(--accent-green);
+            border-color: var(--accent-green);
+            color: white;
+        }
+
+        .save-btn:hover {
+            background: #3fb950;
+        }
+
+        /* Információs Lista */
+        .phonebook-body {
+            padding: 1rem 0;
+        }
+
+        .info-group {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid rgba(48, 54, 61, 0.5);
+            transition: background 0.2s;
+        }
+
+        .info-group:last-child { border-bottom: none; }
+
+        .info-group:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .info-group label {
+            display: block;
+            color: #8b949e;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .info-value a, .info-value span {
+            color: var(--text-bright);
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            word-break: break-all;
+        }
+
+        .info-value a:hover {
+            color: var(--accent-green);
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            body { padding-top: 72px; } /* a kicsi fejlécre igazított top padding mobilon */
+            .contact-container { padding: 1rem; margin-top: 0.5rem; min-height: calc(100dvh - 120px); }
+            .phonebook-window { border-radius: 15px; border: none; box-shadow: none; }
+            .action-btn { width: 75px; }
+            .phonebook-header { padding: 2rem 1rem; }
+        }
+    </style>
 </head>
 <body>
     {% include 'header.html' %}
 
-    <div class="contact-container">
-        <a href="/?lang={{ lang }}" class="back-link"><i class="fas fa-arrow-left"></i> {{ _('Back') }}</a>
-        
-        <div class="phonebook-window">
+    <main class="contact-container">
+        <a href="/?lang={{ lang }}" class="back-link">
+            <i class="fas fa-arrow-left"></i> {{ _('Back to Terminal') }}
+        </a>
+
+        <div class="phonebook-window" id="contact-card" tabindex="-1">
             <div class="phonebook-header">
-                <div class="profile-section">
-                    <div class="avatar-wrapper">
-                        <img src="{{ url_for('static', filename=personal.profile_image) }}" alt="{{ personal.full_name }}" class="phonebook-avatar">
-                    </div>
-                    <h1>{{ personal.full_name }}</h1>
-                    <p class="phonebook-subtitle">{{ personal.title }}</p>
+                <div class="avatar-wrapper">
+                    <img src="{{ url_for('static', filename=personal.profile_image) }}" alt="{{ personal.full_name }}" class="phonebook-avatar">
                 </div>
-                
-                <div class="action-buttons">
-                    <a href="tel:{{ personal.phone }}" class="action-btn" title="{{ _('Call') }}">
-                        <i class="fas fa-phone"></i>
-                        <span>{{ _('Call') }}</span>
-                    </a>
-                    <a href="mailto:{{ personal.email }}" class="action-btn" title="{{ _('Email') }}">
-                        <i class="fas fa-envelope"></i>
-                        <span>{{ _('Email') }}</span>
-                    </a>
-                    <a href="https://matrix.to/#/{{ personal.matrix }}" target="_blank" class="action-btn" title="Matrix">
-                        <i class="fas fa-paper-plane"></i>
-                        <span>{{ _('Matrix') }}</span>
-                    </a>
-                    <a href="{{ url_for('contact_vcf', lang=lang) }}" class="action-btn save-btn" title="{{ _('Save') }}">
-                        <i class="fas fa-user-plus"></i>
-                        <span>{{ _('Save') }}</span>
-                    </a>
-                </div>
+                <h1>{{ personal.full_name }}</h1>
+                <p class="phonebook-subtitle">{{ personal.title }}</p>
+            </div>
+
+            <div class="action-buttons">
+                <a href="tel:{{ personal.phone }}" class="action-btn">
+                    <i class="fas fa-phone"></i>
+                    <span>{{ _('Call') }}</span>
+                </a>
+                <a href="mailto:{{ personal.email }}" class="action-btn">
+                    <i class="fas fa-envelope"></i>
+                    <span>{{ _('Email') }}</span>
+                </a>
+                <a href="https://matrix.to/#/{{ personal.matrix }}" target="_blank" class="action-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>{{ _('Matrix') }}</span>
+                </a>
+                <a href="{{ url_for('contact_vcf', lang=lang) }}" class="action-btn save-btn">
+                    <i class="fas fa-user-plus"></i>
+                    <span>{{ _('Save') }}</span>
+                </a>
             </div>
 
             <div class="phonebook-body">
@@ -59,13 +265,6 @@
                 </div>
 
                 <div class="info-group">
-                    <label>{{ _('GitHub') }}</label>
-                    <div class="info-value">
-                        <a href="{{ personal.github }}" target="_blank">github.com/nurefexc</a>
-                    </div>
-                </div>
-
-                <div class="info-group">
                     <label>{{ _('LinkedIn') }}</label>
                     <div class="info-value">
                         <a href="{{ personal.linkedin }}" target="_blank">linkedin.com/in/miklós-zsitva</a>
@@ -73,29 +272,42 @@
                 </div>
 
                 <div class="info-group">
-                    <label>{{ _('Matrix') }}</label>
+                    <label>{{ _('GitHub') }}</label>
                     <div class="info-value">
-                        <a href="https://matrix.to/#/{{ personal.matrix }}" target="_blank">{{ personal.matrix }}</a>
+                        <a href="{{ personal.github }}" target="_blank">github.com/nurefexc</a>
+                    </div>
+                </div>
+
+                <div class="info-group">
+                    <label>{{ _('Matrix ID') }}</label>
+                    <div class="info-value">
+                        <span>{{ personal.matrix }}</span>
                     </div>
                 </div>
 
                 <div class="info-group">
                     <label>{{ _('Website') }}</label>
                     <div class="info-value">
-                        <a href="https://{{ personal.website }}" target="_blank">https://{{ personal.website }}</a>
+                        <a href="https://{{ personal.website }}" target="_blank">nurefexc.com</a>
                     </div>
                 </div>
 
                 <div class="info-group">
-                    <label>{{ _('Address') }}</label>
+                    <label>{{ _('Availability') }}</label>
                     <div class="info-value">
-                        <span>{{ _(personal.address) }}</span>
+                        <span style="color: var(--accent-green);">● {{ _('Available for B2B Contracts') }}</span>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
+    </main>
     {% include 'footer.html' %}
+    <script>
+      // Fókusz a kontakt kártyára betöltéskor
+      window.addEventListener('DOMContentLoaded', function(){
+        var card = document.getElementById('contact-card');
+        if(card) { card.focus({preventScroll:false}); }
+      });
+    </script>
 </body>
 </html>

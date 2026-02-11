@@ -34,6 +34,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon-16x16.png') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nurefexc.com{{ request.path }}?lang={{ lang }}">
 </head>
 <body>
     {% include 'header.html' %}
@@ -110,7 +113,10 @@
             <div class="skills-pills" id="res-4" style="display: none;">
                 {% for cat in skills.categories %}
                     {% for item in cat.skill_list %}
-                    <span class="pill">{{ _(item) }}</span>
+                    <span class="pill">
+                        {% if item.icon %}<i class="{{ item.icon }}"></i> {% endif %}
+                        {{ _(item.name) }}
+                    </span>
                     {% endfor %}
                 {% endfor %}
             </div>

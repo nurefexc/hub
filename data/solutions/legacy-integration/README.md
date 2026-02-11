@@ -1,0 +1,1 @@
+Connecting decades-old business systems with modern infrastructures. Expertise in maintaining and bridging C, C++, and Harbour-based legacy software.

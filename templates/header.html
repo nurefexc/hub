@@ -1,10 +1,16 @@
 <div class="top-nav">
-    <div class="nav-links">
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-controls="nav-menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-links" id="nav-menu">
         <a href="/?lang={{ lang }}" class="static-cv-link" title="{{ _('Home') }}">
             <i class="fas fa-home"></i> <span>{{ _('Home') }}</span>
         </a>
         <a href="/cv?lang={{ lang }}" class="static-cv-link" title="{{ _('View My CV') }}">
             <i class="fas fa-file-alt"></i> <span>CV</span>
+        </a>
+        <a href="/solutions?lang={{ lang }}" class="static-cv-link" title="{{ _('Solutions') }}">
+            <i class="fas fa-briefcase"></i> <span>{{ _('Solutions') }}</span>
         </a>
         <a href="/contact?lang={{ lang }}" class="static-cv-link" title="{{ _('Contact') }}">
             <i class="fas fa-envelope"></i> <span>{{ _('Contact') }}</span>
@@ -14,3 +20,14 @@
         {{ 'Magyar' if lang == 'en' else 'English' }}
     </a>
 </div>
+<script>
+(function(){
+  const btn = document.querySelector('.nav-toggle');
+  const menu = document.getElementById('nav-menu');
+  if(!btn || !menu) return;
+  btn.addEventListener('click', function(){
+    const isOpen = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+})();
+</script>

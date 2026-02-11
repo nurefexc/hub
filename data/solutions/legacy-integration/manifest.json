@@ -1,0 +1,6 @@
+{
+    "title": "Legacy System Integration",
+    "icon": "bridge",
+    "tech": ["C/C++", "Harbour", "REST APIs", "SQL Server"],
+    "order": 2
+}

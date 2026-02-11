@@ -1,0 +1,6 @@
+{
+  "title": "Data Engineering & ETL Pipelines",
+  "icon": "gears",
+  "tech": ["PostgreSQL", "ETL", "Python", "Airflow"],
+  "order": 5
+}

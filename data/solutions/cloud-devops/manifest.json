@@ -1,0 +1,6 @@
+{
+  "title": "Cloud-Native DevOps & CI/CD",
+  "icon": "cloud",
+  "tech": ["Docker", "Kubernetes", "CI/CD", "Linux"],
+  "order": 6
+}
