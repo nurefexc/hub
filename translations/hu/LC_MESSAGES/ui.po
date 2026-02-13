@@ -108,6 +108,12 @@ msgstr "Ez az önéletrajz automatikusan generálódott egy egyedi Flask backend
 msgid "My custom zsh environment"
 msgstr "Az egyedi zsh környezetem"
 
+msgid "Matrix Status & Notifications"
+msgstr "Matrix állapotjelző és értesítések"
+
+msgid "A lightweight status monitoring and notification system for Matrix. Built for reliable alerting and status updates."
+msgstr "Egy könnyűsúlyú állapotfigyelő és értesítési rendszer Matrixhoz. Megbízható riasztásokhoz és állapotfrissítésekhez tervezve."
+
 msgid "A highly optimized, developer-friendly zsh configuration. Feel free to use and contribute!"
 msgstr "Egy erősen optimalizált, fejlesztőbarát zsh konfiguráció. Nyugodtan használd és járulj hozzá!"
 

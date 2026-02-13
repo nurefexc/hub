@@ -108,6 +108,17 @@ async function runTerminal() {
         await new Promise(resolve => setTimeout(resolve, 500));
     }
 
+    // Item 12 - matrix-status
+    const out12 = document.getElementById('out-12');
+    if (out12) {
+        out12.style.display = 'block';
+        await typeCommand('cmd-12', 'cat projects/matrix-status.md');
+        const res12 = document.getElementById('res-12');
+        if (res12) res12.style.display = 'block';
+        body.scrollTop = body.scrollHeight;
+        await new Promise(resolve => setTimeout(resolve, 500));
+    }
+
     // Item 7 - Terminal joke
     const out7 = document.getElementById('out-7');
     if (out7) {
