@@ -417,6 +417,103 @@ footer {
 
 .lang-btn:hover { background: rgba(255, 255, 255, 0.1); color: var(--text-main); border-color: var(--primary-color); }
 
+.featured-badge-container {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.featured-badge {
+    background: rgba(0, 255, 159, 0.05);
+    border: 1px solid rgba(0, 255, 159, 0.3);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 255, 159, 0.1);
+}
+
+.featured-badge:hover {
+    background: rgba(0, 255, 159, 0.1);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 255, 159, 0.2);
+}
+
+.featured-badge i {
+    font-size: 1.1rem;
+}
+
+/* GNOME-style Badge (Deprecating in favor of image button) */
+.gnome-badge {
+    display: inline-flex;
+    align-items: stretch;
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 20px;
+    transition: transform 0.2s;
+    height: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.gnome-badge:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.badge-label {
+    background-color: #555;
+    color: #fff;
+    padding: 0 6px 0 10px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-value {
+    background-color: #3584e4; /* GNOME Blue */
+    color: #fff;
+    padding: 0 10px 0 6px;
+    display: flex;
+    align-items: center;
+}
+
+.badge-label i {
+    margin-right: 4px;
+    font-size: 10px;
+}
+
+/* GNOME Extension Image Button */
+.gnome-extension-button {
+    display: inline-block;
+    transition: transform 0.2s, opacity 0.2s;
+    vertical-align: middle;
+}
+
+.gnome-extension-button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+.gnome-extension-button img {
+    display: block;
+    border-radius: 4px;
+    height: 34px;
+}
+
 @media (max-width: 768px) {
     body { padding-top: 100px; padding-left: 15px; padding-right: 15px; }
     .terminal-window { border-radius: 8px; }

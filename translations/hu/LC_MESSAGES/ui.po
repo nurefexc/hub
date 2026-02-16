@@ -108,6 +108,21 @@ msgstr "Ez az önéletrajz automatikusan generálódott egy egyedi Flask backend
 msgid "My custom zsh environment"
 msgstr "Az egyedi zsh környezetem"
 
+msgid "GNOME Extension"
+msgstr "GNOME kiterjesztés"
+
+msgid "Extension"
+msgstr "Kiterjesztés"
+
+msgid "Featured"
+msgstr "Kiemelt"
+
+msgid "Featured in TWIM"
+msgstr "Megemlítve a TWIM-ben"
+
+msgid "Featured in TWIM: Matrix Status Monitor"
+msgstr "Megemlítve a TWIM-ben: Matrix Status Monitor"
+
 msgid "Matrix Status & Notifications"
 msgstr "Matrix állapotjelző és értesítések"
 

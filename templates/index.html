@@ -41,6 +41,12 @@
 <body>
     {% include 'header.html' %}
 
+    <div class="featured-badge-container">
+        <a href="https://matrix.org/blog/2026/02/13/this-week-in-matrix-2026-02-13/#dept-of-interesting-projects-satellite-orbital" target="_blank" class="featured-badge">
+            <i class="fas fa-newspaper"></i> {{ _('Featured in TWIM: Matrix Status Monitor') }}
+        </a>
+    </div>
+
     <div class="terminal-window">
         <div class="terminal-header">
             <div class="terminal-title">
@@ -202,9 +208,14 @@
                     <div class="project-desc">
                         {{ _('A lightweight status monitoring and notification system for Matrix. Built for reliable alerting and status updates.') }}
                     </div>
-                    <a href="https://github.com/nurefexc/matrix-status" target="_blank" class="project-link">
-                        <i class="fab fa-github"></i> {{ _('Source Code') }}
-                    </a>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                        <a href="https://github.com/nurefexc/matrix-status" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> {{ _('Source Code') }}
+                        </a>
+                        <a href="https://extensions.gnome.org/extension/9328/matrix-status-monitor/" target="_blank" class="gnome-extension-button">
+                            <img src="https://raw.githubusercontent.com/eonpatapon/gnome-shell-extension-caffeine/master/resources/get_it_on_gnome_extensions.png" alt="Get it on GNOME Extensions">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
