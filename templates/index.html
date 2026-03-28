@@ -42,9 +42,11 @@
     {% include 'header.html' %}
 
     <div class="featured-badge-container">
-        <a href="https://matrix.org/blog/2026/02/13/this-week-in-matrix-2026-02-13/#dept-of-interesting-projects-satellite-orbital" target="_blank" class="featured-badge">
-            <i class="fas fa-newspaper"></i> {{ _('Featured in TWIM: Matrix Status Monitor') }}
+        {% for item in featured %}
+        <a href="{{ item.url }}" target="_blank" class="featured-badge">
+            <i class="{{ item.icon }}"></i> {{ _(item.text) }}
         </a>
+        {% endfor %}
     </div>
 
     <div class="terminal-window">

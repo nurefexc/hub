@@ -96,6 +96,7 @@ def get_all_data():
         'skills': load_json('skills'),
         'education': load_items('education'),
         'languages': load_json('languages'),
+        'featured': load_json('featured'),
         'lang': get_locale()
     }
 

@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://matrix.org/blog/2026/02/13/this-week-in-matrix-2026-02-13/#dept-of-interesting-projects-satellite-orbital",
+    "icon": "fas fa-newspaper",
+    "text": "Featured in TWIM (2026-02-13): Matrix Status Monitor"
+  },
+  {
+    "url": "https://thisweek.gnome.org//posts/2026/02/twig-237/#matrix-status-monitor-v5",
+    "icon": "fas fa-newspaper",
+    "text": "Featured in TWIG (2026-02-20): Matrix Status Monitor"
+  },
+  {
+    "url": "https://matrix.org/blog/2026/02/20/this-week-in-matrix-2026-02-20/#matrix-status-monitor-for-gnome-v5",
+    "icon": "fas fa-newspaper",
+    "text": "Featured in TWIM (2026-02-20): Matrix Status Monitor"
+  }
+]

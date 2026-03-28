@@ -120,8 +120,14 @@ msgstr "Kiemelt"
 msgid "Featured in TWIM"
 msgstr "Megemlítve a TWIM-ben"
 
-msgid "Featured in TWIM: Matrix Status Monitor"
-msgstr "Megemlítve a TWIM-ben: Matrix Status Monitor"
+msgid "Featured in TWIM (2026-02-13): Matrix Status Monitor"
+msgstr "Megemlítve a TWIM-ben (2026-02-13): Matrix Status Monitor"
+
+msgid "Featured in TWIG (2026-02-20): Matrix Status Monitor"
+msgstr "Megemlítve a TWIG-ben (2026-02-20): Matrix Status Monitor"
+
+msgid "Featured in TWIM (2026-02-20): Matrix Status Monitor"
+msgstr "Megemlítve a TWIM-ben (2026-02-20): Matrix Status Monitor"
 
 msgid "Matrix Status & Notifications"
 msgstr "Matrix állapotjelző és értesítések"
